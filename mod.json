@@ -1,0 +1,198 @@
+{
+  "name": "D2R QuickSwitch",
+  "description": "Generates a PowerShell script (QuickSwitch.ps1) – NO AutoHotkey or any additional software required. Sends /players 1-8 on key press. Run QuickSwitch.bat before a D2R session – the script waits for the game to launch and exits automatically when D2R is closed.",
+  "author": "808StaN",
+  "version": "1.0.0",
+  "config": [
+    {
+      "id": "key1",
+      "name": "Key for /players 1",
+      "description": "Key that triggers the /players 1 command",
+      "type": "select",
+      "defaultValue": "F1",
+      "options": [
+        { "label": "Disabled", "value": "None" },
+        { "label": "F1", "value": "F1" },
+        { "label": "F2", "value": "F2" },
+        { "label": "F3", "value": "F3" },
+        { "label": "F4", "value": "F4" },
+        { "label": "F5", "value": "F5" },
+        { "label": "F6", "value": "F6" },
+        { "label": "F7", "value": "F7" },
+        { "label": "F8", "value": "F8" },
+        { "label": "F9", "value": "F9" },
+        { "label": "F10", "value": "F10" },
+        { "label": "F11", "value": "F11" },
+        { "label": "F12", "value": "F12" }
+      ]
+    },
+    {
+      "id": "key2",
+      "name": "Key for /players 2",
+      "description": "Key that triggers the /players 2 command",
+      "type": "select",
+      "defaultValue": "F2",
+      "options": [
+        { "label": "Disabled", "value": "None" },
+        { "label": "F1", "value": "F1" },
+        { "label": "F2", "value": "F2" },
+        { "label": "F3", "value": "F3" },
+        { "label": "F4", "value": "F4" },
+        { "label": "F5", "value": "F5" },
+        { "label": "F6", "value": "F6" },
+        { "label": "F7", "value": "F7" },
+        { "label": "F8", "value": "F8" },
+        { "label": "F9", "value": "F9" },
+        { "label": "F10", "value": "F10" },
+        { "label": "F11", "value": "F11" },
+        { "label": "F12", "value": "F12" }
+      ]
+    },
+    {
+      "id": "key3",
+      "name": "Key for /players 3",
+      "description": "Key that triggers the /players 3 command",
+      "type": "select",
+      "defaultValue": "F3",
+      "options": [
+        { "label": "Disabled", "value": "None" },
+        { "label": "F1", "value": "F1" },
+        { "label": "F2", "value": "F2" },
+        { "label": "F3", "value": "F3" },
+        { "label": "F4", "value": "F4" },
+        { "label": "F5", "value": "F5" },
+        { "label": "F6", "value": "F6" },
+        { "label": "F7", "value": "F7" },
+        { "label": "F8", "value": "F8" },
+        { "label": "F9", "value": "F9" },
+        { "label": "F10", "value": "F10" },
+        { "label": "F11", "value": "F11" },
+        { "label": "F12", "value": "F12" }
+      ]
+    },
+    {
+      "id": "key4",
+      "name": "Key for /players 4",
+      "description": "Key that triggers the /players 4 command",
+      "type": "select",
+      "defaultValue": "F4",
+      "options": [
+        { "label": "Disabled", "value": "None" },
+        { "label": "F1", "value": "F1" },
+        { "label": "F2", "value": "F2" },
+        { "label": "F3", "value": "F3" },
+        { "label": "F4", "value": "F4" },
+        { "label": "F5", "value": "F5" },
+        { "label": "F6", "value": "F6" },
+        { "label": "F7", "value": "F7" },
+        { "label": "F8", "value": "F8" },
+        { "label": "F9", "value": "F9" },
+        { "label": "F10", "value": "F10" },
+        { "label": "F11", "value": "F11" },
+        { "label": "F12", "value": "F12" }
+      ]
+    },
+    {
+      "id": "key5",
+      "name": "Key for /players 5",
+      "description": "Key that triggers the /players 5 command",
+      "type": "select",
+      "defaultValue": "F5",
+      "options": [
+        { "label": "Disabled", "value": "None" },
+        { "label": "F1", "value": "F1" },
+        { "label": "F2", "value": "F2" },
+        { "label": "F3", "value": "F3" },
+        { "label": "F4", "value": "F4" },
+        { "label": "F5", "value": "F5" },
+        { "label": "F6", "value": "F6" },
+        { "label": "F7", "value": "F7" },
+        { "label": "F8", "value": "F8" },
+        { "label": "F9", "value": "F9" },
+        { "label": "F10", "value": "F10" },
+        { "label": "F11", "value": "F11" },
+        { "label": "F12", "value": "F12" }
+      ]
+    },
+    {
+      "id": "key6",
+      "name": "Key for /players 6",
+      "description": "Key that triggers the /players 6 command",
+      "type": "select",
+      "defaultValue": "F6",
+      "options": [
+        { "label": "Disabled", "value": "None" },
+        { "label": "F1", "value": "F1" },
+        { "label": "F2", "value": "F2" },
+        { "label": "F3", "value": "F3" },
+        { "label": "F4", "value": "F4" },
+        { "label": "F5", "value": "F5" },
+        { "label": "F6", "value": "F6" },
+        { "label": "F7", "value": "F7" },
+        { "label": "F8", "value": "F8" },
+        { "label": "F9", "value": "F9" },
+        { "label": "F10", "value": "F10" },
+        { "label": "F11", "value": "F11" },
+        { "label": "F12", "value": "F12" }
+      ]
+    },
+    {
+      "id": "key7",
+      "name": "Key for /players 7",
+      "description": "Key that triggers the /players 7 command",
+      "type": "select",
+      "defaultValue": "F7",
+      "options": [
+        { "label": "Disabled", "value": "None" },
+        { "label": "F1", "value": "F1" },
+        { "label": "F2", "value": "F2" },
+        { "label": "F3", "value": "F3" },
+        { "label": "F4", "value": "F4" },
+        { "label": "F5", "value": "F5" },
+        { "label": "F6", "value": "F6" },
+        { "label": "F7", "value": "F7" },
+        { "label": "F8", "value": "F8" },
+        { "label": "F9", "value": "F9" },
+        { "label": "F10", "value": "F10" },
+        { "label": "F11", "value": "F11" },
+        { "label": "F12", "value": "F12" }
+      ]
+    },
+    {
+      "id": "key8",
+      "name": "Key for /players 8",
+      "description": "Key that triggers the /players 8 command",
+      "type": "select",
+      "defaultValue": "F8",
+      "options": [
+        { "label": "Disabled", "value": "None" },
+        { "label": "F1", "value": "F1" },
+        { "label": "F2", "value": "F2" },
+        { "label": "F3", "value": "F3" },
+        { "label": "F4", "value": "F4" },
+        { "label": "F5", "value": "F5" },
+        { "label": "F6", "value": "F6" },
+        { "label": "F7", "value": "F7" },
+        { "label": "F8", "value": "F8" },
+        { "label": "F9", "value": "F9" },
+        { "label": "F10", "value": "F10" },
+        { "label": "F11", "value": "F11" },
+        { "label": "F12", "value": "F12" }
+      ]
+    },
+    {
+      "id": "tooltipDuration",
+      "name": "Tooltip duration (ms)",
+      "description": "How long (in milliseconds) the notification is shown after using a command. 0 = disabled.",
+      "type": "number",
+      "defaultValue": 1500
+    },
+    {
+      "id": "chatDelay",
+      "name": "Chat open delay (ms)",
+      "description": "Delay between opening chat and typing the command. Increase if the command is not sent correctly.",
+      "type": "number",
+      "defaultValue": 100
+    }
+  ]
+}
