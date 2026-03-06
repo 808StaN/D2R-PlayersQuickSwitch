@@ -1,4 +1,4 @@
-# D2R QuickSwitch
+# D2R PlayersQuickSwitch
 
 A [D2RMM](https://www.nexusmods.com/diablo2resurrected/mods/169) mod that lets you send `/players 1–8` commands in Diablo II: Resurrected with a single key press — **no AutoHotkey or any additional software required**.
 
