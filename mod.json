@@ -2,7 +2,7 @@
   "name": "D2R QuickSwitch",
   "description": "Generates a PowerShell script (QuickSwitch.ps1) – NO AutoHotkey or any additional software required. Sends /players 1-8 on key press. Run QuickSwitch.bat before a D2R session – the script waits for the game to launch and exits automatically when D2R is closed.",
   "author": "808StaN",
-  "version": "1.1.0",
+  "version": "1.0.1",
   "config": [
     {
       "id": "key1",
