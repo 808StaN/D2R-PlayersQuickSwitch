@@ -193,6 +193,13 @@
       "description": "Delay between opening chat and typing the command. Increase if the command is not sent correctly.",
       "type": "number",
       "defaultValue": 100
+    },
+    {
+      "id": "exitOnClose",
+      "name": "Exit when D2R closes",
+      "description": "Automatically stop QuickSwitch when Diablo II: Resurrected is closed.",
+      "type": "checkbox",
+      "defaultValue": true
     }
   ]
 }

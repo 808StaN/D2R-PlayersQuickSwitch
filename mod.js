@@ -16,6 +16,7 @@ const keyMap = {
 
 const tooltipDuration = Math.max(0, parseInt(config.tooltipDuration, 10) || 0);
 const chatDelay = Math.max(0, parseInt(config.chatDelay, 10) || 100);
+const exitOnClose = config.exitOnClose !== false;
 
 // -----------------------------------------------------------------------
 // Validation
@@ -176,17 +177,26 @@ ps.push("        $script:wasRunning = $true");
 ps.push(
   "        Write-Host '[QuickSwitch] D2R detected - hotkeys active.' -ForegroundColor Green",
 );
-ps.push("    } elseif (-not $running -and $script:wasRunning) {");
-ps.push(
-  "        Write-Host '[QuickSwitch] D2R closed - exiting.' -ForegroundColor Red",
-);
-ps.push("        for ($i = 1; $i -le $script:totalHotkeys; $i++) {");
-ps.push(
-  "            [HotkeyForm]::UnregisterHotKey($form.Handle, $i) | Out-Null",
-);
-ps.push("        }");
-ps.push("        [System.Windows.Forms.Application]::Exit()");
-ps.push("    }");
+if (exitOnClose) {
+  ps.push("    } elseif (-not $running -and $script:wasRunning) {");
+  ps.push(
+    "        Write-Host '[QuickSwitch] D2R closed - exiting.' -ForegroundColor Red",
+  );
+  ps.push("        for ($i = 1; $i -le $script:totalHotkeys; $i++) {");
+  ps.push(
+    "            [HotkeyForm]::UnregisterHotKey($form.Handle, $i) | Out-Null",
+  );
+  ps.push("        }");
+  ps.push("        [System.Windows.Forms.Application]::Exit()");
+  ps.push("    }");
+} else {
+  ps.push("    } elseif (-not $running -and $script:wasRunning) {");
+  ps.push(
+    "        Write-Host '[QuickSwitch] D2R closed - hotkeys still active.' -ForegroundColor Yellow",
+  );
+  ps.push("        $script:wasRunning = $false");
+  ps.push("    }");
+}
 ps.push("})");
 ps.push("$timer.Start()");
 ps.push("");
