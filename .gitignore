@@ -3,3 +3,6 @@
 
 ## Ignore local VS Code settings folder
 .vscode/
+
+## Ignore screenshots folder
+ss/
