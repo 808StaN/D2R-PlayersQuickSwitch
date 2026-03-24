@@ -217,7 +217,7 @@ bat.push("title D2R QuickSwitch");
 bat.push("");
 bat.push(":: Check if the script is already running");
 bat.push(
-  "powershell -NoProfile -Command \"exit ([bool](Get-WmiObject Win32_Process -Filter \"Name='powershell.exe'\" | Where-Object { $_.CommandLine -like '*QuickSwitch.ps1*' }))\"",
+  "powershell -NoProfile -Command \"exit ([bool](Get-CimInstance Win32_Process | Where-Object Name -eq 'powershell.exe' | Where-Object ProcessId -ne $PID | Where-Object CommandLine -like '*QuickSwitch.ps1*'))\"",
 );
 bat.push("if %ERRORLEVEL%==1 (");
 bat.push("  echo [D2R QuickSwitch] Script is already running.");
